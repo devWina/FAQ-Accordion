@@ -12,7 +12,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [here](https://github.com/devWina/FAQ-Accordion.git)
-- Live Site URL: [here](https://vercel.com/winas-projects/faq-accordion/9jMSRT2BVTyD4jLns9ckvqvXm52U)
+- Live Site URL: [here](https://devwina.github.io/FAQ-Accordion/)
 
 ## My process
 
