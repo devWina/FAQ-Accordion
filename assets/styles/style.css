@@ -29,12 +29,20 @@ body {
   background: hsl(275, 100%, 97%);
 }
 body main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  body main {
+    padding: 0px 40px 0;
+  }
 }
 body main .bg-img {
   height: 320px;
@@ -44,13 +52,20 @@ body main .bg-img {
   left: 0;
   z-index: 10;
 }
+@media (max-width: 768px) {
+  body main .bg-img img:first-of-type {
+    display: none;
+  }
+  body main .bg-img img:last-of-type {
+    display: inline-block;
+  }
+}
 body main .bg-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 body main .faq-section {
-  min-width: 600px;
   z-index: 20;
   background: hsl(0, 100%, 100%);
   padding: 30px;
@@ -63,6 +78,13 @@ body main .faq-section header {
   gap: 15px;
   margin-bottom: 15px;
   color: hsl(292, 42%, 14%);
+}
+@media (max-width: 768px) {
+  body main .faq-section header {
+    font-size: 2rem;
+    padding: 0 50px 0 0;
+    gap: 8px;
+  }
 }
 body main .faq-section .section-content .question {
   display: flex;
@@ -95,6 +117,17 @@ body main .faq-section .section-content .question .answer {
   /*Transitions*/
   transition: all 700ms ease-in-out 200ms;
 }
+@media (max-width: 768px) {
+  body main .faq-section .section-content .question .answer {
+    margin-top: 10px;
+    line-height: 1.4;
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  body main .faq-section .section-content .question .answer span {
+    display: none;
+  }
+}
 body main .faq-section .section-content hr {
   margin: 20px 0px;
   border: none; /* remove default border */
@@ -103,20 +136,14 @@ body main .faq-section .section-content hr {
 body main .faq-section .section-content hr:first-of-type {
   margin-top: 0px;
 }
-
-@media (max-width: 768px) {
-  .bg-img img:first-of-type {
-    display: none;
-  }
-  .bg-img img:last-of-type {
-    display: block;
-  }
+body main .attribution {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
 }
-/*  .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }*//*# sourceMappingURL=style.css.map */
+body main .attribution a {
+  color: hsl(281, 83%, 54%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
