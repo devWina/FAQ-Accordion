@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.max-h-0 {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.max-h-64 {
+  max-height: 16rem;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  background: hsl(275, 100%, 97%);
+}
+body main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .bg-img {
+  height: 320px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+body main .bg-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+body main .faq-section {
+  min-width: 600px;
+  z-index: 20;
+  background: hsl(0, 100%, 100%);
+  padding: 30px;
+  border-radius: 15px;
+}
+body main .faq-section header {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: hsl(292, 42%, 14%);
+}
+body main .faq-section .section-content .question {
+  display: flex;
+  flex-direction: column;
+}
+body main .faq-section .section-content .question .question-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .faq-section .section-content .question .question-title p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+body main .faq-section .section-content .question .question-title p:hover {
+  color: hsl(281, 83%, 54%);
+}
+body main .faq-section .section-content .question .question-title img {
+  cursor: pointer;
+}
+body main .faq-section .section-content .question .answer {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #7e6eaa;
+  font-weight: 400;
+  /*Transitions*/
+  transition: all 700ms ease-in-out 200ms;
+}
+body main .faq-section .section-content hr {
+  margin: 20px 0px;
+  border: none; /* remove default border */
+  border-top: 2px solid rgb(225, 219, 219);
+}
+body main .faq-section .section-content hr:first-of-type {
+  margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+  .bg-img img:first-of-type {
+    display: none;
+  }
+  .bg-img img:last-of-type {
+    display: block;
+  }
+}
+/*  .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }*//*# sourceMappingURL=style.css.map */

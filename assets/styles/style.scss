@@ -1,0 +1,147 @@
+$White: hsl(0, 100%, 100%);
+$purple: hsl(281, 83%, 54%);
+$Purple-100: hsl(275, 100%, 97%);
+$Purple-600: hsl(292, 16%, 49%);
+$Purple-950: hsl(292, 42%, 14%);
+$grayishPurple: #7e6eaa;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+//General classes
+.hidden {
+  display: none;
+}
+
+.max-h-0 {
+  max-height: 0;
+  overflow: hidden;
+  // display: none;
+}
+
+.max-h-64 {
+  max-height: 16rem;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  background: $Purple-100;
+
+  main {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bg-img {
+      height: 320px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .faq-section {
+      min-width: 600px;
+      // height: 100px;
+      z-index: 20;
+      background: $White;
+      padding: 30px;
+      border-radius: 15px;
+
+      header {
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+        gap: 15px;
+        margin-bottom: 15px;
+        color: $Purple-950;
+      }
+
+      .section-content {
+        .question {
+          display: flex;
+          flex-direction: column;
+          .question-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+              font-size: 1.8rem;
+              font-weight: 600;
+              color: $Purple-950;
+              font-size: 1.6rem;
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                color: $purple;
+              }
+            }
+
+            img {
+              cursor: pointer;
+            }
+          }
+          .answer {
+            font-size: 1.6rem;
+            line-height: 1.7;
+            color: $grayishPurple;
+            font-weight: 400;
+
+            /*Transitions*/
+            transition: all 700ms ease-in-out 200ms;
+          }
+        }
+
+        hr {
+          margin: 20px 0px;
+          border: none; /* remove default border */
+          border-top: 2px solid rgb(225, 219, 219);
+        }
+        hr:first-of-type {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-img {
+    img:first-of-type {
+      display: none;
+    }
+    img:last-of-type {
+      display: block;
+    }
+  }
+}
+/*  .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }*/
