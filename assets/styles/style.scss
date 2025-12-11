@@ -47,9 +47,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    // display: none;
     @media (max-width: 768px) {
-      // max-width: 570px;
       padding: 0px 40px 0;
     }
 
@@ -77,8 +75,6 @@ body {
     }
 
     .faq-section {
-      // max-width: 600px;
-      // height: 100px;
       z-index: 20;
       background: $White;
       padding: 30px;
